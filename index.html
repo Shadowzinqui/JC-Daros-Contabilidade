@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JC Daros Contabilidade</title>
+    <link rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="pageName">
+      <div id="logo"></div>
+      <h1 id="titulo">JC Daros Contabilidade</h1>
+    </header>
+    <!-- botao reset voltar -->
+    <button id="btn-reset" onclick="reset()" style="display: none">
+      Voltar
+    </button>
+    <!-- display menu -->
+    <div class="container" id="mainContainer">
+      <div id="HM" class="menuItens" onclick="openHistory()"></div>
+      <div id="PM" class="menuItens" onclick="openPurpose()"></div>
+      <div id="SM" class="menuItens" onclick="openService()"></div>
+    </div>
+    <div id="frase">
+      Do início do seu negócio à gestão contábil completa, estamos ao seu lado
+      em cada etapa.
+    </div>
+    <!-- historia -->
+
+    <div class="divhistoria" style="display: none">
+      <h4>História:</h4>
+      <p id="historiaescrita">
+        Nossa empresa está no mercado há 12 anos e conta com uma equipe com mais
+        de 15 anos de experiência na área contábil, fiscal e RH. Foi fundada em
+        janeiro de 2013.
+      </p>
+    </div>
+
+    <div class="divproposito" id="proposito" style="display: none">
+      <h4>Propósito:</h4>
+      <p id="propositoEscrito">
+        Oferecer um serviço de qualidade sempre prezando pela excelência e
+        conquistando a confiança dos nossos clientes, oferecendo suporte de
+        acordo com a necessidade de cada empresa.
+      </p>
+    </div>
+
+    <div class="divServicos" id="servico" style="display: none">
+      <h4>Serviços:</h4>
+      <div id="containerServicoEscrito">
+        <p id="escritaServico">
+          ✔️ Abertura de empresas, alterações de contrato, baixas.
+        </p>
+        <p id="escritaServico">
+          ✔️ Declaração de imposto de renda, com suporte o ano todo.
+        </p>
+        <p id="escritaServico">
+          ✔️ Contabilidade para MEI, Simples Nacional e Lucro Presumido,
+          oferecendo suporte específico para cada empresa.
+        </p>
+        <p id="escritaServico">
+          ✔️ Folha de pagamento - seu RH sempre atualizado conforme mudanças na
+          legislação.
+        </p>
+        <p id="escritaServico">
+          ✔️ Gestão de tributos - suporte tributário com profissionais
+          qualificados e especialistas no assunto.
+        </p>
+      </div>
+    </div>
+
+    <footer onclick="toggleSidebar()">
+      <h3 id="foot">Contate-nos</h3>
+    </footer>
+    <div id="sidebar" class="sidebar">
+      <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+      <p>Endereço: Estrada Bento Osvaldo Trisch, 397 Pedancino</p>
+      <p>Email: jcdaros.contabil@gmail.com</p>
+      <p>Telefone: (54) 9 9999-7004</p>
+      <a href="mailto:jcdaros.contabil@gmail.com" style="color: lightblue"
+        >Enviar e-mail</a
+      >
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!--
+
+  
+  -->
