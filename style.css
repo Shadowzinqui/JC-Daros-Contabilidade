@@ -1,16 +1,17 @@
 body {
   background-image: url(contabili.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin: 0;
-  padding: 0;
+  background-size: cover; /* cobre toda a tela */
+  background-position: center; /* centraliza a imagem */
+  background-repeat: no-repeat; /* evita repetições */
+  background-attachment: fixed; /* a imagem não se move ao rolar */
 }
-
 #btn-reset {
   padding: 12px 30px;
-  background: linear-gradient(90deg, #4c4d4c, #242423);
+  background: linear-gradient(
+    90deg,
+    #4c4d4c,
+    #242423
+  ); /* Mesma paleta metálica */
   color: #fff;
   font-size: 18px;
   font-family: "Segoe UI", sans-serif;
@@ -22,30 +23,35 @@ body {
 }
 
 #btn-reset:hover {
-  background: linear-gradient(90deg, #5a5959, #4f4f4f);
+  background: linear-gradient(
+    90deg,
+    #5a5959,
+    #4f4f4f
+  ); /* Hover mais claro e suave */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* header */
 #pageName {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
+  width: 600px;
   margin: 0 auto;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-
 #logo {
   background-image: url(logo.png);
   width: 150px;
   height: 100px;
-  border-radius: 20px;
+  border-radius: 46px;
+  border-color: black;
   background-size: cover;
+
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 20px;
 }
-
 h1 {
   display: none;
   font-family: "Segoe UI", sans-serif;
@@ -60,9 +66,12 @@ h1 {
 /* main */
 #mainContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-content: center;
-  gap: 40px;
+  grid-template-columns: repeat(
+    3,
+    auto
+  ); /* Cada item usa sua própria largura */
+  justify-content: center; /* Centraliza os itens na linha */
+  gap: 100px; /* Espaço entre os itens */
   padding: 20px;
 }
 
@@ -70,39 +79,54 @@ h1 {
   display: flex;
   color: white;
   padding: 10px;
+  margin-top: 40px;
   text-align: center;
   border-radius: 36px;
+  text-align: center;
   justify-content: center;
   align-items: center;
   font-size: 20px;
   height: 100px;
-  width: 100%;
-  max-width: 350px;
-  margin: 0 auto;
+  width: 300px;
 }
-
 .menuItens:hover {
   background: transparent;
   transition: 600ms;
 }
 
-#PM, #HM, #SM {
-  width: 100%;
-  max-width: 350px;
+#PM {
+  width: 350px;
   height: 100px;
+  background-image: url(prop.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+#HM {
+  width: 350px;
+  height: 100px;
+  background-image: url(historia.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+#SM {
+  width: 350px;
+  height: 100px;
+  background-image: url(servico.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
 }
 
-#PM { background-image: url(prop.png); }
-#HM { background-image: url(historia.png); }
-#SM { background-image: url(servico.png); }
-
-#PM:hover, #HM:hover, #SM:hover {
-  filter: brightness(0.8);
-  transform: scale(1.05);
+#HM:hover,
+#PM:hover,
+#SM:hover {
+  filter: brightness(0.8); /* escurece */
+  transform: scale(1.05); /* dá um leve zoom */
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -110,60 +134,79 @@ h1 {
 #frase {
   display: flex;
   font-family: Impact, Haettenschweiler, sans-serif;
-  margin-top: 60px;
+  margin-top: 90px;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  text-align: center;
-  padding: 0 10px;
+  font-size: 30px;
 }
 
-/* historia / proposito / servicos - containers responsivos */
-.divhistoria, #proposito, .divServicos {
+/* historia */
+.divhistoria {
   display: flex;
+  align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 20px;
+  width: 100vh;
+  margin: 0 auto;
   text-align: center;
-  box-sizing: border-box;
-  flex-wrap: wrap;
+  margin-top: -100px;
 }
 
-#historiaescrita,
-#propositoEscrito {
+h4 {
+  font-size: 40px;
+}
+
+#historiaescrita {
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   color: #000000;
   border-radius: 26px;
   background: linear-gradient(90deg, #a6a7a5, #686867);
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  padding: 20px;
-  box-sizing: border-box;
+  height: 150px;
+  width: 700px;
 }
 
+/* proposito */
+#proposito {
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -100px;
+}
+#propositoEscrito {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #000000;
+  border-radius: 26px;
+  background: linear-gradient(90deg, #a6a7a5, #686867);
+  height: 150px;
+  width: 700px;
+}
+
+/* serviços */
+.divServicos {
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -100px;
+}
 #containerServicoEscrito {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
   gap: 20px;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
 }
-
 #escritaServico {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: #000000;
   border-radius: 26px;
   background: linear-gradient(90deg, #a6a7a5, #686867);
-  padding: 20px;
-  height: auto;
-  width: 100%;
-  max-width: 400px;
-  box-sizing: border-box;
-  margin: 0 auto;
+  height: 100px;
+  width: 400px;
 }
 
 footer {
@@ -173,27 +216,26 @@ footer {
   padding: 15px 30px;
   cursor: pointer;
   position: fixed;
-  bottom: 20px;
+  bottom: 20px; /* espaço entre o rodapé e a borda da tela */
   left: 50%;
   transform: translateX(-50%);
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
-
 footer:hover {
-  filter: brightness(0.5);
+  filter: brightness(0.5); /* escurece */
   cursor: pointer;
   transition: 500ms;
 }
 
-/* Sidebar */
+/* Sidebar oculta por padrão */
 .sidebar {
   height: auto;
   width: 250px;
   position: fixed;
   top: 20px;
-  right: -300px;
+  right: -300px; /* fora da tela */
   background-color: #444;
   color: beige;
   overflow-y: auto;
@@ -205,7 +247,7 @@ footer:hover {
 }
 
 .sidebar.open {
-  right: 0;
+  right: 0; /* entra na tela */
 }
 
 .close-btn {
@@ -215,26 +257,4 @@ footer:hover {
   position: absolute;
   top: 10px;
   right: 20px;
-}
-
-/* 📱 Media Queries */
-@media (max-width: 768px) {
-  #btn-reset {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  #historiaescrita,
-  #propositoEscrito,
-  #escritaServico {
-    font-size: 18px;
-  }
-
-  #frase {
-    font-size: 20px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
 }
