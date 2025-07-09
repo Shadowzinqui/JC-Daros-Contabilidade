@@ -162,7 +162,7 @@ h4 {
   border-radius: 26px;
   background: linear-gradient(90deg, #a6a7a5, #686867);
   height: 150px;
-  width: 700px;
+  width: 100vh;
 }
 
 /* proposito */
@@ -181,7 +181,7 @@ h4 {
   border-radius: 26px;
   background: linear-gradient(90deg, #a6a7a5, #686867);
   height: 150px;
-  width: 700px;
+  width: 100vh;
 }
 
 /* serviços */
